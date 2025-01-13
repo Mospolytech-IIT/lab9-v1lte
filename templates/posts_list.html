@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Список постов</h1>
+<ul>
+    {% for post in posts %}
+    <li>{{ post.title }} | {{ post.content }} | <a href="/posts/edit/{{ post.id }}">Редактировать</a></li>
+    {% endfor %}
+</ul>
+<a href="/posts/create">Создать новый пост</a>
+{% endblock %}
